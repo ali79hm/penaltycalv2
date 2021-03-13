@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:penaltycalv2"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="645" MaxWidth="645" MaxHeight="500" MinWidth="645" MinHeight="500">
+        Title="محاسبه گر جریمه v2" Height="500" Width="645" MaxWidth="645" MaxHeight="500" MinWidth="645" MinHeight="500">
     <Grid>
         <Rectangle Stroke="#FFC8C8C8" StrokeThickness="1" StrokeDashArray="2 2" SnapsToDevicePixels="True" Margin="18,11,29.4,394.4"/>
         <TextBlock FontSize="10" FontWeight="Bold" 
