@@ -138,7 +138,7 @@
     <Resource Include="Oxygen-Icons.org-Oxygen-Apps-accessories-calculator.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Screenshot 2021-03-13 174523.png" />
+    <Resource Include="Screenshot.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.0.0\build\MaterialDesignThemes.targets')" />
