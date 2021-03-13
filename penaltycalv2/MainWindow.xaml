@@ -1,0 +1,170 @@
+﻿<Window x:Class="penaltycalv2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:penaltycalv2"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="645" MaxWidth="645" MaxHeight="500" MinWidth="645" MinHeight="500">
+    <Grid>
+        <Rectangle Stroke="#FFC8C8C8" StrokeThickness="1" StrokeDashArray="2 2" SnapsToDevicePixels="True" Margin="18,11,29.4,394.4"/>
+        <TextBlock FontSize="10" FontWeight="Bold" 
+                       VerticalAlignment="Top" 
+                       Foreground="Black"
+                       Text=" ویدئو " Margin="563,4,0,0" HorizontalAlignment="Left" Width="36" RenderTransformOrigin="0.5,0.5" Height="19" Background="#FFFFFCFC" TextAlignment="Center">
+        </TextBlock>
+        <TextBlock FontSize="15" FontWeight="Bold" 
+                       VerticalAlignment="Top" 
+                       Foreground="Black"
+                       Text=": تعداد کل " Margin="536,27,0,0" HorizontalAlignment="Left" Width="67" RenderTransformOrigin="0.5,0.5" Height="29">
+        </TextBlock>
+        <TextBox x:Name="videoNumber" FlowDirection="RightToLeft" HorizontalAlignment="Left" Margin="442,27,0,0" 
+                 Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Height="24" materialDesign:HintAssist.Hint="number"
+                 materialDesign:HintAssist.IsFloating="True" PreviewTextInput="NumberValidationTextBox" GotFocus="videoNumber_GotFocus_1">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                    <Setter Property="Padding" Value="1,1.5,0,1" />
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Rectangle Stroke="#FFC8C8C8" StrokeThickness="1" StrokeDashArray="2 2" SnapsToDevicePixels="True" Margin="18,84,29.4,239.4"/>
+        <TextBlock FontSize="15" FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            Foreground="Black"
+            Margin="360,27,0,0" HorizontalAlignment="Left" Width="80" RenderTransformOrigin="0.5,0.5" Height="29"><Run Text=": "/><Run FlowDirection="RightToLeft" Text="انجام شده"/></TextBlock>
+        <TextBox x:Name="compVideoNumber" FlowDirection="RightToLeft" HorizontalAlignment="Left" Margin="270,27,0,0" 
+                 Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="86" Height="24" materialDesign:HintAssist.Hint="number" 
+                 materialDesign:HintAssist.IsFloating="True" RenderTransformOrigin="0.513,0.633" Padding="1,1.5,0,1" PreviewTextInput="NumberValidationTextBox" GotFocus="compVideoNumber_GotFocus">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <RadioButton x:Name="RDPersent" Content="درصد" HorizontalAlignment="Left" Margin="202,31,0,0" VerticalAlignment="Top" Checked="RDPersent_Checked"/>
+        <RadioButton x:Name="RdNumber" IsChecked="True" Content="تعداد" HorizontalAlignment="Left" Margin="145,31,0,0" VerticalAlignment="Top" Checked="RdNumber_Checked"/>
+
+        <ListView Margin="317,103,34.4,249.4" x:Name="list">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="درصد قابل انجام پروژه" Width="120" DisplayMemberBinding="{Binding fullproject}" />
+                    <GridViewColumn Header="درصد انجام شده پروژه" Width="150" DisplayMemberBinding="{Binding solvedproject}" />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <TextBlock FontSize="15" FontWeight="Bold" 
+                       VerticalAlignment="Top" 
+                       Foreground="Black"
+                       Text=": درصد قابل انجام " Margin="194,105,0,0" RenderTransformOrigin="0.5,0.5" Height="29" HorizontalAlignment="Left" Width="114"/>
+        <TextBox x:Name="projectNumber" FlowDirection="RightToLeft" HorizontalAlignment="Left" Margin="34,106,0,0"
+                 Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="24" materialDesign:HintAssist.Hint="number"
+                 materialDesign:HintAssist.IsFloating="True" Padding="12,1.5,0,1" PreviewTextInput="NumberValidationTextBox" GotFocus="projectNumber_GotFocus">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                    <Setter Property="Padding" Value="1,1.5,0,1" />
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <TextBlock FontSize="15" FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            Foreground="Black"
+            Text=": درصد انجام شده " Margin="194,135,0,0" HorizontalAlignment="Left" Width="151" RenderTransformOrigin="0.5,0.5" Height="29"/>
+        <TextBox x:Name="compProjectNumber" FlowDirection="RightToLeft" HorizontalAlignment="Left" Margin="34,135,0,0" 
+                 Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="147" Height="24" materialDesign:HintAssist.Hint="number"
+                 materialDesign:HintAssist.IsFloating="True" Padding="12,1.5,0,1" PreviewTextInput="NumberValidationTextBox" GotFocus="compProjectNumber_GotFocus">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="3"/>
+                    <Setter Property="Padding" Value="1,1.5,0,1" />
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+
+        <Button x:Name="calcBtn" Content="محــــــــــاســــبـــه" HorizontalAlignment="Left" Margin="31,237,0,0" VerticalAlignment="Top" Height="22" Width="571" Click="calcBtn_Click" TextElement.FontWeight="Bold">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,1" StartPoint="0,1">
+                    <GradientStop Color="#FF0AF5F9" Offset="1"/>
+                    <GradientStop Color="#FF9B32ED"/>
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left" Height="90" Margin="29,269,0,0" VerticalAlignment="Top" Width="575"/>
+        <TextBlock x:Name="outputText" FontSize="15" FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            Foreground="Black"
+            FlowDirection="RightToLeft"
+            TextAlignment="Left"
+            TextWrapping="Wrap"
+            Text="" Margin="33,274,0,0" HorizontalAlignment="Left" Width="566" RenderTransformOrigin="0.5,0.5" Height="82"/>
+        <TextBlock x:Name="percentLable" FontSize="9" FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            Foreground="Black"
+            Visibility ="Hidden"
+            Text="%" Margin="345,32,0,0" HorizontalAlignment="Left" Width="12" RenderTransformOrigin="0.5,0.5" Height="13"/>
+        <TextBlock x:Name="percentLable2" FontSize="9" FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            Foreground="Black"
+            Text="%" Margin="167,112,0,0" HorizontalAlignment="Left" Width="12" RenderTransformOrigin="0.406,0.646" Height="12"/>
+        <TextBlock FontSize="13" FontWeight="Medium" 
+            VerticalAlignment="Top" 
+            Foreground="Black"
+            FlowDirection="RightToLeft"
+            TextAlignment="Left"
+            TextWrapping="Wrap"
+            Text="چند نکته &#x0a; => حداکثر جریمه 30 هزار تومان تعین شده &#x0a; => به درصد های موفقیت بالای 85 درصد جریمه تعلق نمیگیرد &#x0a;=> ضریب پروژه 5 برابر ویدئو است &#x0a;=> درصد پروژه بر حسب تعداد تیتر های اجباری انجام شده محاسبه میشود" Margin="32,368,0,0" HorizontalAlignment="Left" Width="566" RenderTransformOrigin="0.5,0.5" Height="97"/>
+        <Button Content="افزودن" HorizontalAlignment="Left" Height="30" Margin="36,179,0,0" VerticalAlignment="Top" Width="130" Click="Button_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="delbtn" Content="حذف" HorizontalAlignment="Left" Height="30" Margin="174,179,0,0" VerticalAlignment="Top" Width="130" Click="delbtn_Click">
+            <Button.Resources>
+                
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            
+        </Button>
+        <TextBlock x:Name="percentLable2_Copy" FontSize="9" FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            Foreground="Black"
+            Text="%" Margin="167,141,0,0" HorizontalAlignment="Left" Width="12" RenderTransformOrigin="0.406,0.646" Height="12"/>
+        <TextBlock FontSize="10" FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            Foreground="Black"
+            Text=" پروژه " Margin="564,78,0,0" HorizontalAlignment="Left" Width="36" RenderTransformOrigin="0.5,0.5" Height="19" Background="#FFFFFCFC" TextAlignment="Center"/>
+        <Button x:Name="eraseallbtn" Content="پاک کردن همه" HorizontalAlignment="Left" Height="30" Margin="41,375,0,0" VerticalAlignment="Top" Width="130" Click="eraseallbtn_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="aboteus" Content="درباره" HorizontalAlignment="Left" Height="30" Margin="39,414,0,0" VerticalAlignment="Top" Width="130" Click="aboteus_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock x:Name="noPjText" FontSize="15" FontWeight="Bold" 
+            VerticalAlignment="Top" 
+            Foreground="#FFB0AAAA"
+            Text=" هیچ پروژه ای اضافه نشده" Margin="376,153,0,0" RenderTransformOrigin="0.5,0.5" Height="29" HorizontalAlignment="Left" Width="179"/>
+    </Grid>
+</Window>
