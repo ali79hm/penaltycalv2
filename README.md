@@ -4,4 +4,4 @@
 لینک نسخه 2 : 
 لینک نسخه 1 : https://github.com/ali79hm/CompactNavigationMenu-master/releases/tag/v1.1
 
-![Screengrab](Screenshot 2021-03-13 174523.png)
+![Screengrab](penaltycalv2/Screenshot.png)
